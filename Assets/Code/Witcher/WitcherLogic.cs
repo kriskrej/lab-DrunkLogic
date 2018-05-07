@@ -30,7 +30,6 @@ public class WitcherLogic : MonoBehaviour {
     }
 
 
-    float life = 0.5f;
 	public float GetKnobPositionInNextFrame(float currentPosition01, float mousePosition01) {
         return (currentPosition01+mousePosition01)/2;
     }
