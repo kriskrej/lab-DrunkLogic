@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-public class WitcherLogic : MonoBehaviour {
-    public WitcherVisualisation ui;
+public class DrunkLogic : MonoBehaviour {
+    public DrunkUI ui;
     public Animator animator;
 
     public void Start() {
@@ -26,10 +26,5 @@ public class WitcherLogic : MonoBehaviour {
 
     bool IsMouseOverBar() {
         return Mathf.Abs(ui.BarX - ui.MouseX) < ui.BarWidth / 2;
-    }
-
-
-	public float GetKnobPositionInNextFrame(float currentPosition01, float mousePosition01) {
-        return (currentPosition01+mousePosition01)/2;
     }
 }

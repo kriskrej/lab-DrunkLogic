@@ -585,7 +585,7 @@ MonoBehaviour:
   camera: {fileID: 2141052384}
   witcherUi: {fileID: 923013688}
   endGameUi: {fileID: 776862158}
-  witcherLogic: {fileID: 923013690}
+  drunkLogic: {fileID: 923013690}
 --- !u!4 &1813213522
 Transform:
   m_ObjectHideFlags: 0

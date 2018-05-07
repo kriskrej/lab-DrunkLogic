@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] SmoothFollow camera;
     [SerializeField] GameObject witcherUi;
     [SerializeField] EndGameUi endGameUi;
-    [SerializeField] WitcherLogic witcherLogic;
+    [SerializeField] DrunkLogic drunkLogic;
 
     static GameManager instance;
 
@@ -20,10 +20,10 @@ public class GameManager : MonoBehaviour {
 
     void RestartGame() {
         Debug.Log("(Re)start!\n");
-        witcherLogic.Start();
+        drunkLogic.Start();
         instance.endGameUi.gameObject.SetActive(false);
         taichi = Instantiate(taichiPrefab);
-        witcherLogic.animator = taichi.GetComponent<Animator>();
+        drunkLogic.animator = taichi.GetComponent<Animator>();
         camera.target = taichi;
         instance.witcherUi.gameObject.SetActive(true);
     }
