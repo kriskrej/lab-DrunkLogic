@@ -32,7 +32,14 @@ public class GameManager : MonoBehaviour {
         instance.endGameUi.gameObject.SetActive(true);
         instance.endGameUi.label.text = text;
         instance.witcherUi.gameObject.SetActive(false);
+        instance.StartCoroutine(LightsOff(instance.taichi.GetComponentInChildren<Light>()));
     }
 
-
+    static IEnumerator LightsOff(Light light) {
+        while (light.intensity>0) {
+            light.intensity -= Time.deltaTime * 0.3f;
+            yield return new WaitForEndOfFrame();
+        }
+        light.enabled = false;
+    }
 }

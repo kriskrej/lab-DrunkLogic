@@ -11,6 +11,6 @@ public class SmoothFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    transform.position = Vector3.Lerp(transform.position, target.position + distance, Time.deltaTime);
+	    transform.position = Vector3.Lerp(transform.position, target.position + distance, Time.deltaTime*2f);
 	}
 }
