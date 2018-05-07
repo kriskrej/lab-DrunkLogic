@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class WitcherLogic : MonoBehaviour {
     public WitcherVisualisation ui;
+    public Animator animator;
+
+    void Start() {
+        ui.BarX = 500;
+    }
+
+    float speed = 100;
 
     void Update() {
         ui.PointX = ui.MouseX;
         if (IsMouseOverBar()) {
-            ui.BarX++;
+            ui.BarX+=Time.deltaTime * speed;
         }
         else {
-            ui.BarX--;
+            ui.BarX-= Time.deltaTime * speed;
         }
-        //ui.BarX = ui.MouseX;
-        ui.BarWidth = (1000-ui.BarX)/4;
-
+        ui.BarWidth = (1000-ui.BarX)/8;
+        animator.SetFloat("Drunk", 1f-ui.BarX/1000f);
         
     }
 
