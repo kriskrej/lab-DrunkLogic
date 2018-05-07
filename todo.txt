@@ -1,0 +1,11 @@
+1. Niech zatacza się coraz bardziej.
+2. Jak padnie, pokażmy respawn window.
+3. Niech myszka porusza się za myszką.
+4. Czy mysza jest na pasku.
+5. Zmienna grubość paska
+6. Niech z czasem będzie coraz trudniej.
+7. Niech pokazuje odległość w metrach.
+8. Niech losowo zawieje wiatr i znosi pasek na boki.
+9. A może każmy graczowi utrzymać kropkę na środku, nie na początku?
+10. I dodajmy ranking top3?
+11. I w ogóle zróbmy z tego fajną minigrę?
