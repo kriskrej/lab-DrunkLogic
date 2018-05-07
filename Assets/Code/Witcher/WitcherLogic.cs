@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WitcherLogic : MonoBehaviour {
     public WitcherVisualisation ui;
     public Animator animator;
 
-    void Start() {
+    public void Start() {
         ui.BarX = 500;
     }
 
@@ -22,6 +20,7 @@ public class WitcherLogic : MonoBehaviour {
         }
         ui.BarWidth = (1000-ui.BarX)/8;
         animator.SetFloat("Drunk", 1f-ui.BarX/1000f);
+        if(ui.BarX<1)GameManager.ShowRespawnScreen("You have lost. Everything.");
         
     }
 
