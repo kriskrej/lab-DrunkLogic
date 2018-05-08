@@ -8,7 +8,7 @@ public class DrunkLogic : MonoBehaviour {
 
     public void Start() {
         ui.BarWidth = 100;
-        ui.BarX = 500;
+        ui.PointX = ui.BarX = 500;
     }
 
     void Update() {
